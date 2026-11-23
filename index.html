@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152727">
+  <meta name="description" content="大清县令 — 一款中英双语清代地方司法互动历史游戏。A bilingual interactive history game about justice and governance in Qing China.">
+  <title>大清县令 | The Magistrate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="The Magistrate, home">
+      <span class="brand-seal">清</span>
+      <span class="brand-name"><strong>大清县令</strong><small>THE MAGISTRATE</small></span>
+    </a>
+    <nav class="header-actions" aria-label="Game controls">
+      <button id="notesButton" type="button" class="text-button" data-i18n="history">史料与说明</button>
+      <button id="soundButton" type="button" class="icon-button" aria-label="Toggle sound" title="Sound">♪ <span id="soundStatus" class="sr-only">Off</span></button>
+      <button id="languageButton" type="button" class="language-button" title="Switch language">EN</button>
+    </nav>
+  </header>
+
+  <main id="app" class="app" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <span>大清县令 <span class="footer-divider">/</span> The Magistrate</span>
+    <span id="footerDescription">一个关于证据、律例与地方社会的互动历史实验</span>
+    <a href="https://ealc.illinois.edu/directory/profile/jinjuwu2" target="_blank" rel="noopener noreferrer">Developer: Jinju Wu ↗</a>
+  </footer>
+
+  <dialog id="notesDialog" class="notes-dialog" aria-labelledby="notesTitle">
+    <div class="dialog-top">
+      <h2 id="notesTitle"></h2>
+      <button id="closeNotesButton" class="dialog-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div id="notesContent" class="notes-content"></div>
+  </dialog>
+</body>
+</html>
